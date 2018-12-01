@@ -20,7 +20,13 @@
               </form>
           </div>
           <div class="row video-screen">
-            <video autoplay playsinline></video>
+              <video id="localVideo" autoplay playsinline></video>
+              <video id="remoteVideo" autoplay playsinline></video>
+              <div>
+                  <button id="callButton">Call</button>
+                  <button id="hangupButton">Hang Up</button>
+              </div>
+            <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
             <script src='/javascripts/index.js'></script>
           </div>
       </div>
