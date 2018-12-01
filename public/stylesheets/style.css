@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+.video-screen {
+  text-align: center;
+}
+
+.jumbotron {
+  padding-top: 1% !important;
+  padding-bottom: 2% !important;
+}

@@ -10,7 +10,19 @@
           <div class="jumbotron">
               <h1>Web Video Chat</h1>
               <p>Welcome to Web Video Chat!</p>
+              <form>
+                  <div class="form-group">
+                    <label for="exampleInputVideoSessionID">Video Session ID:</label>
+                    <input type="sessionID" class="form-control" id="exampleInputVideoSessionID" aria-describedby="sessionHelp" placeholder="Enter Session ID">
+                    <small id="sessionIDHelp" class="form-text text-muted">We'll never share your streaming information with anyone else.</small>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
           </div>
-        </div>
+          <div class="row video-screen">
+            <video autoplay playsinline></video>
+            <script src='/javascripts/index.js'></script>
+          </div>
+      </div>
   </body>
 </html>
