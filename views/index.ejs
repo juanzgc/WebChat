@@ -7,28 +7,26 @@
   </head>
   <body>
       <div class="container">
-          <div class="jumbotron">
-              <h1>Web Video Chat</h1>
-              <p>Welcome to Web Video Chat!</p>
-              <form>
-                  <div class="form-group">
-                    <label for="exampleInputVideoSessionID">Video Session ID:</label>
-                    <input type="sessionID" class="form-control" id="exampleInputVideoSessionID" aria-describedby="sessionHelp" placeholder="Enter Session ID">
-                    <small id="sessionIDHelp" class="form-text text-muted">We'll never share your streaming information with anyone else.</small>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-          </div>
-          <div class="row video-screen">
-              <video id="localVideo" autoplay playsinline></video>
-              <video id="remoteVideo" autoplay playsinline></video>
-              <div>
-                  <button id="callButton">Call</button>
-                  <button id="hangupButton">Hang Up</button>
-              </div>
-            <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-            <script src='/javascripts/index.js'></script>
-          </div>
+        <div class="jumbotron">
+            <h1>Web Video Chat</h1>
+            <p>Welcome to Web Video Chat!</p>
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputVideoSessionID">Video Session ID:</label>
+                  <input type="sessionID" class="form-control" id="exampleInputVideoSessionID" aria-describedby="sessionHelp" placeholder="Enter Session ID">
+                  <small id="sessionIDHelp" class="form-text text-muted">We'll never share your streaming information with anyone else.</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="row video-screen">
+            <video id="localVideo" autoplay playsinline></video>
+            <video id="remoteVideo" autoplay playsinline></video>
+        </div>
       </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+
+      <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+      <script src='/javascripts/index.js'></script>
   </body>
 </html>
