@@ -7,19 +7,20 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   console.log("index page");
   console.log(req.app.get('env'));
-  res.render('index', { 
-    title: 'Express'
-  });
 
   if (process.env.NODE_ENV === 'production') {
     if (req.headers['x-forwarded-proto'] != 'https') {
         return res.redirect('https://' + req.headers.host + req.url);
     } else {
-        return next();
+      res.render('index', { 
+        title: 'Express'
+      });
     }
   } 
   else {
-    return next();
+    res.render('index', { 
+      title: 'Express'
+    });
   }
 
 });
