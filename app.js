@@ -27,6 +27,8 @@ app.use('/users', usersRouter);
 
 // https redirect for heroku, only when not in development
 app.use(function(req, res, next) {
+  console.log(req.app.get('env'));
+  console.log("^ req.app.get");
   if (req.app.get('env') !== 'development') {
     if (req.headers['x-forwarded-proto'] != 'https') {
         return res.redirect('https://' + req.headers.host + req.url);
