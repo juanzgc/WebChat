@@ -26,20 +26,28 @@ app.use('/users', usersRouter);
 
 
 // https redirect for heroku, only when not in development
-app.use(function(req, res, next) {
-  console.log(req.app.get('env'));
-  console.log("^ req.app.get");
-  if (req.app.get('env') !== 'development') {
-    if (req.headers['x-forwarded-proto'] != 'https') {
-        return res.redirect('https://' + req.headers.host + req.url);
-    } else {
-        return next();
-    }
-  } 
-  else {
-    return next();
-  }
-});
+// app.use(function(req, res, next) {
+//   console.log(req.app.get('env'));
+//   console.log("^ req.app.get");
+//   if (req.app.get('env') !== 'development') {
+//     if (req.headers['x-forwarded-proto'] != 'https') {
+//         return res.redirect('https://' + req.headers.host + req.url);
+//     } else {
+//         return next();
+//     }
+//   } 
+//   else {
+//     return next();
+//   }
+// });
+// Redirect http to https
+// app.get('*', (req, res, next) => {
+//   if (req.headers['x-forwarded-proto'] != 'https'){
+//     res.redirect('https://' + req.hostname + req.url);
+//   } else {
+//     next();
+//   }
+// });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
