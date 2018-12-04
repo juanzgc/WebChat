@@ -8,6 +8,7 @@ router.get('/', function(req, res, next) {
   console.log("index page");
   console.log(req.app.get('env'));
 
+  // Https redirection for heroku app
   if (process.env.NODE_ENV === 'production') {
     if (req.headers['x-forwarded-proto'] != 'https') {
         return res.redirect('https://' + req.headers.host + req.url);
