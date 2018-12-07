@@ -11,9 +11,13 @@
             <h1>Web Video Chat</h1>
             <p>Welcome to Web Video Chat!</p>
         </div>
-        <div class="row video-screen">
-            <video id="localVideo" autoplay muted playsinline></video>
-            <video id="remoteVideo" autoplay playsinline></video>
+        <div class="row text-middle">
+            <div class="col col-md-6">
+                <video id="localVideo" autoplay muted playsinline></video>
+            </div>
+            <div class="col col-md-6">
+              <video id="remoteVideo" autoplay playsinline></video>
+            </div>
         </div>
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
