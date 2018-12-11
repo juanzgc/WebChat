@@ -17,17 +17,17 @@ Run `npm start`.
 
 ## Terminologies
 
-NAT: Network Access Protocol  
-STUN: Session Traversal Utilities for NAT  
-TURN: Traversal Using Relays around NAT  
-JSEP: JavaScript Session Establishment Protocol  
+**NAT**: Network Access Protocol  
+**STUN**: Session Traversal Utilities for NAT  
+**TURN**: Traversal Using Relays around NAT  
+**JSEP**: JavaScript Session Establishment Protocol  
       -> network discovery  
       -> NAT traversal  
       -> session creation & management  
       -> communication security  
       -> media-capability metadata  
       -> error handling  
-SIP: Session Initiation Protocol  
-SDP: Session Description Protocol  
-ICE: Interactive Connectivity Establishment Protocol  
+**SIP**: Session Initiation Protocol  
+**SDP**: Session Description Protocol  
+**ICE**: Interactive Connectivity Establishment Protocol  
       -> ICE candidate: IP address, port, transportation protocol  
